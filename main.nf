@@ -39,11 +39,11 @@ index_ch_value = index_ch.first()
 process star_index {
     cpus 26
     input:
-    path 'genome.fa' from genome_fasta
-    path 'genes.gtf' from genome_gtf
+    path 'genome.fa' from params.genome_fasta 
+    path 'genes.gtf' from params.genome_gtf
 
     output:
-    path 'star_iundex' into star_iundex_ch
+    path 'star_iundex' into star_index_ch
 
     script:
     """
@@ -54,7 +54,7 @@ process star_index {
 
     """
 }
-star_iundex_ch_value = star_iundex_ch_value.first()
+star_index_ch_value = star_index_ch.first()
 
 process fastqc {
      publishDir "$params.outdir/fastqc/$sample_id", mode:'copy'
