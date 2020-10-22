@@ -53,6 +53,7 @@ process star_index {
         --genomeFastaFiles genome.fa --sjdbGTFfile genes.gtf --genomeDir star_iundex/
 
     """
+}
 star_iundex_ch_value = star_iundex_ch_value.first()
 
 process fastqc {
