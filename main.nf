@@ -39,8 +39,8 @@ index_ch_value = index_ch.first()
 process star_index {
     cpus 26
     input:
-    path 'genome.fa' from genome_fasta
-    path 'genes.gtf' from genome_gtf
+    path 'genome.fa' from params.genome_fasta 
+    path 'genes.gtf' from params.genome_gtf
 
     output:
     path 'star_iundex' into star_iundex_ch
