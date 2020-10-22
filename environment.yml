@@ -1,0 +1,12 @@
+name: base
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - star
+  - trim-galore
+  - subread
+  - salmon
+  - fastqc
+  - multiqc
